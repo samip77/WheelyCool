@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dvO-NT-26V">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wheel Item List View Controller-->
+        <scene sceneID="3O8-oU-ln5">
+            <objects>
+                <viewController storyboardIdentifier="WheelItemListViewController" id="e8D-aY-DDV" customClass="WheelItemListViewController" customModule="WheelExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uLM-Wn-ao6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UyI-wF-VIh">
+                                <rect key="frame" x="16" y="60" width="382" height="786"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yyS-Tl-8yE">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="742"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVr-je-e3a">
+                                        <rect key="frame" x="0.0" y="742" width="382" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="XoR-Jr-V93"/>
+                                        </constraints>
+                                        <state key="normal" title="Done"/>
+                                        <connections>
+                                            <action selector="doneButtonAction:" destination="e8D-aY-DDV" eventType="touchUpInside" id="LLA-SQ-NmF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GOs-oD-Rdp" firstAttribute="bottom" secondItem="UyI-wF-VIh" secondAttribute="bottom" constant="16" id="5rn-ss-Mkp"/>
+                            <constraint firstItem="GOs-oD-Rdp" firstAttribute="trailing" secondItem="UyI-wF-VIh" secondAttribute="trailing" constant="16" id="EWY-jG-jFS"/>
+                            <constraint firstItem="UyI-wF-VIh" firstAttribute="top" secondItem="GOs-oD-Rdp" secondAttribute="top" constant="16" id="HvP-A7-z0k"/>
+                            <constraint firstItem="UyI-wF-VIh" firstAttribute="leading" secondItem="GOs-oD-Rdp" secondAttribute="leading" constant="16" id="rHc-V7-5aV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GOs-oD-Rdp"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ywp-rh-LOz"/>
+                    <connections>
+                        <outlet property="doneButton" destination="DVr-je-e3a" id="DaK-RU-65y"/>
+                        <outlet property="tableView" destination="yyS-Tl-8yE" id="TKt-Ic-aoB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jGv-N2-NLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="497.10144927536237" y="63.616071428571423"/>
+        </scene>
+        <!--Wheel View Controller-->
+        <scene sceneID="nHb-Bp-BUa">
+            <objects>
+                <viewController storyboardIdentifier="WheelViewController" id="dvO-NT-26V" customClass="WheelViewController" customModule="WheelExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bG0-q2-sOi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tMw-Sm-m46">
+                                <rect key="frame" x="16" y="60" width="382" height="786"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="to4-hM-zy4" customClass="WheelyView" customModule="WheelExample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="726"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNR-0K-OPt">
+                                        <rect key="frame" x="0.0" y="742" width="382" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="XR1-X7-ZnD"/>
+                                        </constraints>
+                                        <state key="normal" title="Spin"/>
+                                        <connections>
+                                            <action selector="spinButtonAction:" destination="dvO-NT-26V" eventType="touchUpInside" id="fSP-Tf-yMA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rpT-B7-AIT" firstAttribute="bottom" secondItem="tMw-Sm-m46" secondAttribute="bottom" constant="16" id="3bB-gh-bRW"/>
+                            <constraint firstItem="rpT-B7-AIT" firstAttribute="trailing" secondItem="tMw-Sm-m46" secondAttribute="trailing" constant="16" id="V99-JB-KoN"/>
+                            <constraint firstItem="tMw-Sm-m46" firstAttribute="top" secondItem="rpT-B7-AIT" secondAttribute="top" constant="16" id="Z6w-5c-pnY"/>
+                            <constraint firstItem="tMw-Sm-m46" firstAttribute="leading" secondItem="rpT-B7-AIT" secondAttribute="leading" constant="16" id="iuH-1K-qMQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rpT-B7-AIT"/>
+                    </view>
+                    <connections>
+                        <outlet property="spinButton" destination="JNR-0K-OPt" id="aZb-5u-QZn"/>
+                        <outlet property="wheelyView" destination="to4-hM-zy4" id="o1J-a5-wwR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n7H-x6-VfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1355" y="64"/>
+        </scene>
+    </scenes>
+</document>
