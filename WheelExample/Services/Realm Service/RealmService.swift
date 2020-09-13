@@ -9,22 +9,6 @@
 import Foundation
 import RealmSwift
 
-enum RealmError: Error {
-  case objectNotFound
-  case writeError
-  case deleteError
-  
-  var localizedDescription: String {
-    switch self {
-    case .writeError:
-      return "Error: Data could not be saved."
-    case .objectNotFound:
-      return "Error: Object not found."
-    case .deleteError:
-      return "Error: Could not be deleted."
-    }
-  }
-}
 
 class ReamlService {
   static let shared = ReamlService()

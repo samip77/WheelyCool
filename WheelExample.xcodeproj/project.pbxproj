@@ -12,7 +12,6 @@
 		34333595250A1C110025330E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34333594250A1C110025330E /* SceneDelegate.swift */; };
 		3433359C250A1C150025330E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3433359B250A1C150025330E /* Assets.xcassets */; };
 		3433359F250A1C150025330E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3433359D250A1C150025330E /* LaunchScreen.storyboard */; };
-		343335AA250A1C150025330E /* WheelExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343335A9250A1C150025330E /* WheelExampleTests.swift */; };
 		343335B9250A1EC50025330E /* wheelItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343335B8250A1EC50025330E /* wheelItemModel.swift */; };
 		343335C2250A227A0025330E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343335C1250A227A0025330E /* AppConstants.swift */; };
 		343335C4250A230C0025330E /* AppConstants+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343335C3250A230C0025330E /* AppConstants+Color.swift */; };
@@ -43,6 +42,9 @@
 		345754AD250C738900D74C68 /* WheelItemListRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345754AC250C738900D74C68 /* WheelItemListRealmRepository.swift */; };
 		345754AF250C905000D74C68 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345754AE250C905000D74C68 /* UIViewController+Alert.swift */; };
 		345754B3250CDBA400D74C68 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345754B2250CDBA400D74C68 /* RealmService.swift */; };
+		345754B9250E14BA00D74C68 /* MockWheelItemListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345754B8250E14BA00D74C68 /* MockWheelItemListRepository.swift */; };
+		345754BB250E261A00D74C68 /* RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345754BA250E261A00D74C68 /* RealmError.swift */; };
+		345754C1250E279D00D74C68 /* WheelItemListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345754C0250E279D00D74C68 /* WheelItemListViewModelTests.swift */; };
 		C5F17C76A1C23D34CE639D03 /* Pods_WheelExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B694442AAB660F982B8531 /* Pods_WheelExampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +67,6 @@
 		3433359E250A1C150025330E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		343335A0250A1C150025330E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		343335A5250A1C150025330E /* WheelExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WheelExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		343335A9250A1C150025330E /* WheelExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelExampleTests.swift; sourceTree = "<group>"; };
 		343335AB250A1C150025330E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		343335B8250A1EC50025330E /* wheelItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wheelItemModel.swift; sourceTree = "<group>"; };
 		343335C1250A227A0025330E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -97,6 +98,9 @@
 		345754AC250C738900D74C68 /* WheelItemListRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelItemListRealmRepository.swift; sourceTree = "<group>"; };
 		345754AE250C905000D74C68 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		345754B2250CDBA400D74C68 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		345754B8250E14BA00D74C68 /* MockWheelItemListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWheelItemListRepository.swift; sourceTree = "<group>"; };
+		345754BA250E261A00D74C68 /* RealmError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmError.swift; sourceTree = "<group>"; };
+		345754C0250E279D00D74C68 /* WheelItemListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelItemListViewModelTests.swift; sourceTree = "<group>"; };
 		3B3DA654467D232A9402D1E9 /* Pods-WheelExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WheelExampleTests.release.xcconfig"; path = "Target Support Files/Pods-WheelExampleTests/Pods-WheelExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		570713F2B8753C885C6F823A /* Pods-WheelExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WheelExample.debug.xcconfig"; path = "Target Support Files/Pods-WheelExample/Pods-WheelExample.debug.xcconfig"; sourceTree = "<group>"; };
 		717B0583DE54AE0F5D29C733 /* Pods-WheelExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WheelExample.release.xcconfig"; path = "Target Support Files/Pods-WheelExample/Pods-WheelExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,8 +167,9 @@
 		343335A8250A1C150025330E /* WheelExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				343335A9250A1C150025330E /* WheelExampleTests.swift */,
+				345754B7250E146B00D74C68 /* Mocks */,
 				343335AB250A1C150025330E /* Info.plist */,
+				345754C0250E279D00D74C68 /* WheelItemListViewModelTests.swift */,
 			);
 			path = WheelExampleTests;
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				345754B2250CDBA400D74C68 /* RealmService.swift */,
+				345754BA250E261A00D74C68 /* RealmError.swift */,
 			);
 			path = "Realm Service";
 			sourceTree = "<group>";
@@ -385,6 +391,14 @@
 				345754A4250C6A4A00D74C68 /* TableView+Extension.swift */,
 			);
 			path = ViewHelper;
+			sourceTree = "<group>";
+		};
+		345754B7250E146B00D74C68 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				345754B8250E14BA00D74C68 /* MockWheelItemListRepository.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		964241C9B926E6991DC0FC01 /* Pods */ = {
@@ -588,6 +602,7 @@
 				343335E4250A33170025330E /* UIView + Extension.swift in Sources */,
 				3457549D250C68F900D74C68 /* StoryboardIdentifiableProtocol.swift in Sources */,
 				343335E6250A334E0025330E /* UIButton + Extension.swift in Sources */,
+				345754BB250E261A00D74C68 /* RealmError.swift in Sources */,
 				343335DF250A2AF80025330E /* WheelItemListTableViewCell.swift in Sources */,
 				345754A1250C698400D74C68 /* ResuableViewProtocol.swift in Sources */,
 				34575498250C509500D74C68 /* WheelyView+LayersDrawing.swift in Sources */,
@@ -613,7 +628,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				343335AA250A1C150025330E /* WheelExampleTests.swift in Sources */,
+				345754B9250E14BA00D74C68 /* MockWheelItemListRepository.swift in Sources */,
+				345754C1250E279D00D74C68 /* WheelItemListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
