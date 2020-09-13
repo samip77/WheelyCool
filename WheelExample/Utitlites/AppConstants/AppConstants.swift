@@ -8,5 +8,4 @@
 
 import Foundation
 
-struct AppConstants {
-} 
+struct AppConstants { } 

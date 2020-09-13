@@ -13,12 +13,12 @@ import Combine
 class WheelItemListViewModel: ObservableObject  {
   private var repository: WheelItemListRepository
   private let itemLimit = 10
- 
+  
   @Published var isLoading = false
   @Published var errorMessage: String?
   @Published var enableNavigation = false
   @Published var items: [WheelItemViewModel] = [] {
-    didSet{
+    didSet {
       enableNavigation = items.count > 0
     }
   }
@@ -34,17 +34,20 @@ class WheelItemListViewModel: ObservableObject  {
     }
     
     isLoading = true
+    
     let id = Date().description
     let wheelItem = WheelItemModel(id: id, title: title)
-  
+    
     repository.save(wheelItem) { [weak self] (result) in
+      guard let self = self else { return }
       switch result {
       case .success:
-        self?.items.append(WheelItemViewModel(wheelItem))
+        self.items.append(WheelItemViewModel(wheelItem))
       case .failure(let error):
-        self?.errorMessage = error.localizedDescription
+        self.errorMessage = error.localizedDescription
       }
-      self?.isLoading = false
+      
+      self.isLoading = false
     }
   }
   
@@ -55,27 +58,34 @@ class WheelItemListViewModel: ObservableObject  {
     let item: WheelItemViewModel = items[index]
     
     repository.deleteWheelItem(with: item.primaryKey) { [weak self] (result) in
+      guard let self = self else { return }
+      
       switch result {
       case .success:
-        self?.items.remove(at: index)
+        self.items.remove(at: index)
         break
       case .failure(let error):
-        self?.errorMessage = error.localizedDescription
+        self.errorMessage = error.localizedDescription
       }
-      self?.isLoading = false
+      
+      self.isLoading = false
     }
   }
   
   func loadWheelItems(){
     isLoading = true
+    
     repository.getWheelItemList { [weak self] (result) in
+      guard let self = self else { return }
+      
       switch result {
       case .success(let items):
-        self?.items = items.map{ WheelItemViewModel($0)}
+        self.items = items.map{ WheelItemViewModel($0)}
       case .failure(let error):
-        self?.errorMessage = error.localizedDescription
+        self.errorMessage = error.localizedDescription
       }
-      self?.isLoading = false
+      
+      self.isLoading = false
     }
   }
 }

@@ -11,8 +11,9 @@ import UIKit
 extension SceneDelegate {
   internal func setupInitialViewController(windowScene: UIWindowScene) {
     setupNavigationAppearance()
+    
     window = UIWindow(windowScene: windowScene)
-    window?.rootViewController = self.getInitialViewController()
+    window?.rootViewController = getInitialViewController()
     window?.makeKeyAndVisible()
   }
   

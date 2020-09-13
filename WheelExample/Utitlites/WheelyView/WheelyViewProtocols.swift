@@ -9,7 +9,7 @@
 import UIKit
 
 @objc protocol WheelyViewDataSource: AnyObject {
-  func wheelyView(totalSlicesFor wheelyView: WheelyView) -> Int
+  func wheelyViewTotalNumberOfSlice(_ wheelyView: WheelyView) -> Int
   func wheelyView(_ wheeyView: WheelyView, titleFor index: Int) -> String
   func wheelyView(_ wheelyView: WheelyView, titleColorFor index: Int) -> UIColor
   func wheelyView(_ wheelyView: WheelyView, sliceColorFor index: Int) -> UIColor

@@ -10,7 +10,6 @@ import UIKit
 
 
 extension UIStoryboard {
-  
   enum Storyboard: String {
     //TODO: Add new storyboards name if applicable.
     case wheel = "Wheel"
@@ -29,7 +28,7 @@ extension UIStoryboard {
     guard let viewController = instantiateViewController(withIdentifier: T.storyboardIdentifier) as? T else {
       fatalError("\n\nCould not find view controller with name \(T.storyboardIdentifier)\n\n")
     }
-  
+    
     return viewController
   }
 }
