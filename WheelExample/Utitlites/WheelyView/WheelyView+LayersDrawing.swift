@@ -22,7 +22,7 @@ extension WheelyView {
     let circlePath = UIBezierPath(arcCenter: center,
                                   radius: wheelRadius,
                                   startAngle: 0,
-                                  endAngle: 2 * CGFloat.pi,
+                                  endAngle: oneRotation,
                                   clockwise: true)
     wheelLayer.path = circlePath.cgPath
     wheelLayer.fillColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
@@ -86,8 +86,8 @@ extension WheelyView {
     let pointX = center.x + (radius/2) * cos(angle)
     let pointY = center.y + (radius/2) * sin(angle)
     
-    let width = radius * 0.7
-    let height = radius * 0.15
+    let width = radius * sliceTextWidthToRadiusRatio
+    let height = radius * sliceTextHeightToRadiusRatio
     
     let size = CGSize(width: width , height: height)
     let origin = CGPoint(x: pointX - width/2, y: pointY - height/2)

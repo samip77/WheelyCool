@@ -13,10 +13,15 @@ class WheelyView: UIView {
   //MARK:- Default Settings Variables
   private let defaultPadding: CGFloat = 8.0
   private let defaultMargin: CGFloat = 16.0
+  
   private let defaultNumberofSlice = 0
+  internal let sliceTextWidthToRadiusRatio: CGFloat = 0.7
+  internal let sliceTextHeightToRadiusRatio: CGFloat = 0.15
+  
   internal let oneRotation = 2 * CGFloat.pi
-  internal let defaultAnimationDuration = 5.0
   internal let defaultBaseNumberOfRotation: CGFloat = 25
+  internal let defaultAnimationDuration = 5.0
+  
   internal var selectedIndex: Int?
   
   //MARK:- ShapeLayers
@@ -55,10 +60,10 @@ class WheelyView: UIView {
   }
   
   lazy var sliceAngle: CGFloat = {
-    if self.totalSlice > 0 {
+    if totalSlice > 0 {
       return oneRotation / CGFloat(totalSlice)
     }else {
-      return 1.0
+      return oneRotation
     }
   }()
   
