@@ -358,9 +358,17 @@
 		345754B0250CDB7E00D74C68 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				345754B2250CDBA400D74C68 /* RealmService.swift */,
+				345754B4250D9D3700D74C68 /* New Group */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		345754B4250D9D3700D74C68 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				345754B2250CDBA400D74C68 /* RealmService.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		964241C9B926E6991DC0FC01 /* Pods */ = {
