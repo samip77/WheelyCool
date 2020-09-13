@@ -65,6 +65,7 @@ class WheelItemListViewModel: ObservableObject  {
         self.items.remove(at: index)
         break
       case .failure(let error):
+        print(error.localizedDescription)
         self.errorMessage = error.localizedDescription
       }
       
