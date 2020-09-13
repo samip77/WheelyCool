@@ -45,6 +45,7 @@
 		345754B9250E14BA00D74C68 /* MockWheelItemListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345754B8250E14BA00D74C68 /* MockWheelItemListRepository.swift */; };
 		345754BB250E261A00D74C68 /* RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345754BA250E261A00D74C68 /* RealmError.swift */; };
 		345754C1250E279D00D74C68 /* WheelItemListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345754C0250E279D00D74C68 /* WheelItemListViewModelTests.swift */; };
+		345754C3250E288900D74C68 /* WheelViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345754C2250E288900D74C68 /* WheelViewModelTests.swift */; };
 		C5F17C76A1C23D34CE639D03 /* Pods_WheelExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B694442AAB660F982B8531 /* Pods_WheelExampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		345754B8250E14BA00D74C68 /* MockWheelItemListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWheelItemListRepository.swift; sourceTree = "<group>"; };
 		345754BA250E261A00D74C68 /* RealmError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmError.swift; sourceTree = "<group>"; };
 		345754C0250E279D00D74C68 /* WheelItemListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelItemListViewModelTests.swift; sourceTree = "<group>"; };
+		345754C2250E288900D74C68 /* WheelViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelViewModelTests.swift; sourceTree = "<group>"; };
 		3B3DA654467D232A9402D1E9 /* Pods-WheelExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WheelExampleTests.release.xcconfig"; path = "Target Support Files/Pods-WheelExampleTests/Pods-WheelExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		570713F2B8753C885C6F823A /* Pods-WheelExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WheelExample.debug.xcconfig"; path = "Target Support Files/Pods-WheelExample/Pods-WheelExample.debug.xcconfig"; sourceTree = "<group>"; };
 		717B0583DE54AE0F5D29C733 /* Pods-WheelExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WheelExample.release.xcconfig"; path = "Target Support Files/Pods-WheelExample/Pods-WheelExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				345754B7250E146B00D74C68 /* Mocks */,
 				343335AB250A1C150025330E /* Info.plist */,
 				345754C0250E279D00D74C68 /* WheelItemListViewModelTests.swift */,
+				345754C2250E288900D74C68 /* WheelViewModelTests.swift */,
 			);
 			path = WheelExampleTests;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 			files = (
 				345754B9250E14BA00D74C68 /* MockWheelItemListRepository.swift in Sources */,
 				345754C1250E279D00D74C68 /* WheelItemListViewModelTests.swift in Sources */,
+				345754C3250E288900D74C68 /* WheelViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
