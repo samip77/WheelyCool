@@ -62,43 +62,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tMw-Sm-m46">
-                                <rect key="frame" x="16" y="60" width="382" height="786"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="to4-hM-zy4" customClass="WheelyView" customModule="WheelExample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="726"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNR-0K-OPt">
-                                        <rect key="frame" x="0.0" y="742" width="382" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="XR1-X7-ZnD"/>
-                                        </constraints>
-                                        <state key="normal" title="Spin"/>
-                                        <connections>
-                                            <action selector="spinButtonAction:" destination="dvO-NT-26V" eventType="touchUpInside" id="fSP-Tf-yMA"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <view contentMode="scaleToFill" horizontalCompressionResistancePriority="747" verticalCompressionResistancePriority="747" translatesAutoresizingMaskIntoConstraints="NO" id="to4-hM-zy4" customClass="WheelyView" customModule="WheelExample" customModuleProvider="target">
+                                <rect key="frame" x="16" y="257" width="382" height="382"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="to4-hM-zy4" secondAttribute="height" id="Okq-hd-mJW"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNR-0K-OPt">
+                                <rect key="frame" x="16" y="802" width="382" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="fPK-Ug-OVW"/>
+                                </constraints>
+                                <state key="normal" title="Spin"/>
+                                <connections>
+                                    <action selector="spinButtonAction:" destination="dvO-NT-26V" eventType="touchUpInside" id="fSP-Tf-yMA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B00-uW-2xL">
+                                <rect key="frame" x="16" y="60" width="382" height="181"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="rpT-B7-AIT" firstAttribute="bottom" secondItem="tMw-Sm-m46" secondAttribute="bottom" constant="16" id="3bB-gh-bRW"/>
-                            <constraint firstItem="rpT-B7-AIT" firstAttribute="trailing" secondItem="tMw-Sm-m46" secondAttribute="trailing" constant="16" id="V99-JB-KoN"/>
-                            <constraint firstItem="tMw-Sm-m46" firstAttribute="top" secondItem="rpT-B7-AIT" secondAttribute="top" constant="16" id="Z6w-5c-pnY"/>
-                            <constraint firstItem="tMw-Sm-m46" firstAttribute="leading" secondItem="rpT-B7-AIT" secondAttribute="leading" constant="16" id="iuH-1K-qMQ"/>
+                            <constraint firstItem="rpT-B7-AIT" firstAttribute="trailing" secondItem="B00-uW-2xL" secondAttribute="trailing" constant="16" id="1Sg-wg-pzx"/>
+                            <constraint firstItem="rpT-B7-AIT" firstAttribute="trailing" secondItem="JNR-0K-OPt" secondAttribute="trailing" constant="16" id="4uz-ab-biV"/>
+                            <constraint firstItem="B00-uW-2xL" firstAttribute="top" secondItem="rpT-B7-AIT" secondAttribute="top" constant="16" id="Mqy-d4-JGz"/>
+                            <constraint firstItem="to4-hM-zy4" firstAttribute="top" secondItem="B00-uW-2xL" secondAttribute="bottom" constant="16" id="OfZ-Yz-rCf"/>
+                            <constraint firstItem="rpT-B7-AIT" firstAttribute="bottom" secondItem="JNR-0K-OPt" secondAttribute="bottom" constant="16" id="QMu-1k-XSA"/>
+                            <constraint firstItem="to4-hM-zy4" firstAttribute="centerX" secondItem="bG0-q2-sOi" secondAttribute="centerX" id="RIf-KF-2Bi"/>
+                            <constraint firstItem="B00-uW-2xL" firstAttribute="leading" secondItem="rpT-B7-AIT" secondAttribute="leading" constant="16" id="g5b-8w-ilh"/>
+                            <constraint firstItem="JNR-0K-OPt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="to4-hM-zy4" secondAttribute="bottom" constant="8" id="k5c-tp-ngg"/>
+                            <constraint firstItem="JNR-0K-OPt" firstAttribute="leading" secondItem="rpT-B7-AIT" secondAttribute="leading" constant="16" id="oj9-Vb-EFw"/>
+                            <constraint firstItem="to4-hM-zy4" firstAttribute="centerY" secondItem="bG0-q2-sOi" secondAttribute="centerY" id="rJS-Od-yK7"/>
+                            <constraint firstItem="to4-hM-zy4" firstAttribute="top" secondItem="B00-uW-2xL" secondAttribute="bottom" constant="16" id="w6q-Hs-3Hb"/>
+                            <constraint firstItem="rpT-B7-AIT" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="to4-hM-zy4" secondAttribute="trailing" constant="16" id="wS3-V3-out"/>
+                            <constraint firstItem="to4-hM-zy4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rpT-B7-AIT" secondAttribute="leading" constant="16" id="wbx-MC-Sw1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rpT-B7-AIT"/>
                     </view>
                     <connections>
                         <outlet property="spinButton" destination="JNR-0K-OPt" id="aZb-5u-QZn"/>
                         <outlet property="wheelyView" destination="to4-hM-zy4" id="o1J-a5-wwR"/>
+                        <outlet property="winnerLabel" destination="B00-uW-2xL" id="MEb-0s-Jne"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n7H-x6-VfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1355" y="64"/>
+            <point key="canvasLocation" x="1353.6231884057972" y="63.616071428571423"/>
         </scene>
     </scenes>
 </document>

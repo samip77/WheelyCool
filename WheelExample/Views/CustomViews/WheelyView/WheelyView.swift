@@ -75,7 +75,7 @@ class WheelyView: UIView {
   //MARK:- View Lifecycle
   override func draw(_ rect: CGRect) {
     super.draw(rect)
-    drawWheel()
+    drawWheel(rect)
   }
   
   override init(frame: CGRect) {
