@@ -13,22 +13,27 @@ extension WheelyView {
     guard totalSlice > 0 else { return }
     let initialAngle = (CGFloat(selectedIndex ?? 0) * sliceAngle)
     
-    let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
-    rotationAnimation.timingFunction = .init(name: .easeInEaseOut)
-    rotationAnimation.fromValue =  initialAngle
-    rotationAnimation.duration = self.defaultAnimationDuration
-    rotationAnimation.isRemovedOnCompletion = false
-    rotationAnimation.fillMode = .forwards
-    rotationAnimation.delegate = self
-    
     selectedIndex = Int.random(in: 0..<totalSlice)
     let selectedAngle = (CGFloat(selectedIndex ?? 0) * sliceAngle)
     
-    let oneRotation = 2 * CGFloat.pi
-    let defaultRotation  = (CGFloat(defaultBaseNumberOfRotation) * oneRotation)
-    rotationAnimation.toValue =  defaultRotation + selectedAngle
-   
+    let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
+    rotationAnimation.timingFunction = .init(name: .easeInEaseOut)
+    rotationAnimation.isRemovedOnCompletion = false
+    rotationAnimation.fillMode = .forwards
+    rotationAnimation.duration = defaultAnimationDuration
+    rotationAnimation.fromValue =  initialAngle
+    rotationAnimation.toValue = getTotalRotation(with: selectedAngle)
+    
+    rotationAnimation.delegate = self
+    
     wheelLayer.add(rotationAnimation, forKey: "rotation")
+  }
+  
+  private func getTotalRotation(with selectedAngle: CGFloat) -> CGFloat {
+    let defaultRotation  = defaultBaseNumberOfRotation * oneRotation
+    let totalRotation = defaultRotation + selectedAngle
+    
+    return totalRotation
   }
 }
 
@@ -37,5 +42,4 @@ extension WheelyView: CAAnimationDelegate {
     guard flag, let index = selectedIndex else { return }
     delegate?.wheelyView(self, didSelectAt: index)
   }
-
 }

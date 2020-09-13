@@ -9,7 +9,6 @@
 import UIKit
 
 class WheelViewController: UIViewController {
-  
   //MARK:- IBOutlets and Variables
   @IBOutlet private weak var wheelyView: WheelyView!
   @IBOutlet private weak var spinButton: UIButton!
@@ -20,6 +19,7 @@ class WheelViewController: UIViewController {
   class func load(with wheelViewModel: WheelViewModel) -> WheelViewController {
     let vc: WheelViewController = UIStoryboard.storyboard(storyboard: .wheel).instantiateViewController()
     vc.viewModel = wheelViewModel
+    
     return vc
   }
   
@@ -45,7 +45,7 @@ class WheelViewController: UIViewController {
 
 //MARK:- WheelyView DataSource
 extension WheelViewController: WheelyViewDataSource {
-  func wheelyView(totalSlicesFor wheelyView: WheelyView) -> Int {
+  func wheelyViewTotalNumberOfSlice(_ wheelyView: WheelyView) -> Int {
     return viewModel.items.count
   }
   
@@ -65,6 +65,8 @@ extension WheelViewController: WheelyViewDataSource {
 //MARK:- WheelyView Delegate
 extension WheelViewController: WheelyViewDelegate {
   func wheelyView(_ wheelyView: WheelyView, didSelectAt index: Int) {
-    self.showAlert(with: "Lucky Winner is:", and: viewModel.items[index].title, preferredStyle: .alert)
+    showAlert(with: "Lucky Winner is:",
+                   and: viewModel.items[index].title,
+                   preferredStyle: .alert)
   }
 }

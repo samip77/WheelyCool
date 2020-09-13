@@ -18,10 +18,8 @@ enum RealmError: Error {
     switch self {
     case .writeError:
       return "Error: Data could not be saved."
-      
     case .objectNotFound:
       return "Error: Object not found."
-      
     case .deleteError:
       return "Error: Could not be deleted."
     }
@@ -36,12 +34,12 @@ class ReamlService {
   private init() { }
   
   func save<T: Object>(_ object: T, onCompletion: (Result<Bool, Error>) -> ()) {
-    do{
+    do {
       try realm.write{
         realm.add(object, update: .modified)
         onCompletion(.success(true))
       }
-    }catch {
+    } catch {
       onCompletion(.failure(RealmError.writeError))
     }
   }
@@ -51,17 +49,20 @@ class ReamlService {
     onCompletion(.success(objects))
   }
   
-  func deleteItem<T: Object>(of type: T.Type, with primaryKey: String, onCompletion: (Result<Bool, Error>) -> ()) {
+  func deleteItem<T: Object>(of type: T.Type,
+                             with primaryKey: String,
+                             onCompletion: (Result<Bool, Error>) -> ()) {
     guard let  object = realm.object(ofType: type, forPrimaryKey: primaryKey) else {
       onCompletion(.failure(RealmError.objectNotFound))
       return
     }
+    
     do {
       try realm.write {
         realm.delete(object)
         onCompletion(.success(true))
       }
-    } catch{
+    } catch {
       onCompletion(.failure(RealmError.deleteError))
     }
   }

@@ -27,7 +27,7 @@ extension UIColor {
       }
       return .black
     }
+    
     return (random, complementory)
   }
-  
 }

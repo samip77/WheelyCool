@@ -9,9 +9,9 @@
 import UIKit
 
 extension UIView {
-  func rounded(by cornerRadius:CGFloat){
-    self.layer.cornerRadius = cornerRadius
-    self.layer.masksToBounds = true
+  func rounded(by cornerRadius: CGFloat) {
+    layer.cornerRadius = cornerRadius
+    layer.masksToBounds = true
   }
   
   func rounded() {

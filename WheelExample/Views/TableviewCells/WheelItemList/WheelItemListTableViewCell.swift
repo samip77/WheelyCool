@@ -9,13 +9,13 @@
 import UIKit
 
 class WheelItemListTableViewCell: UITableViewCell, NibLoadableView {
-
-  @IBOutlet weak var wheelItemNameLabel: UILabel!
+  
+  @IBOutlet private weak var wheelItemNameLabel: UILabel!
   
   override func awakeFromNib() {
-        super.awakeFromNib()
-        initialSetup()
-    }
+    super.awakeFromNib()
+    initialSetup()
+  }
   
   func initialSetup() {
     wheelItemNameLabel.font = AppConstants.Font.cellTitle
@@ -24,7 +24,7 @@ class WheelItemListTableViewCell: UITableViewCell, NibLoadableView {
   
   func configure(with viewModel: WheelItemViewModel, and index: Int) {
     wheelItemNameLabel.text = viewModel.title
-    contentView.backgroundColor = index % 2 == 0 ?
-      AppConstants.Color.cellBackground : .white
+    contentView.backgroundColor = index % 2 == 0
+      ? AppConstants.Color.cellBackground : .white
   }
 }
