@@ -46,6 +46,7 @@
 		345754BB250E261A00D74C68 /* RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345754BA250E261A00D74C68 /* RealmError.swift */; };
 		345754C1250E279D00D74C68 /* WheelItemListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345754C0250E279D00D74C68 /* WheelItemListViewModelTests.swift */; };
 		345754C3250E288900D74C68 /* WheelViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345754C2250E288900D74C68 /* WheelViewModelTests.swift */; };
+		345754C9250E3F9200D74C68 /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 345754C8250E3F2200D74C68 /* PressStart2P-Regular.ttf */; };
 		C5F17C76A1C23D34CE639D03 /* Pods_WheelExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B694442AAB660F982B8531 /* Pods_WheelExampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		345754BA250E261A00D74C68 /* RealmError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmError.swift; sourceTree = "<group>"; };
 		345754C0250E279D00D74C68 /* WheelItemListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelItemListViewModelTests.swift; sourceTree = "<group>"; };
 		345754C2250E288900D74C68 /* WheelViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelViewModelTests.swift; sourceTree = "<group>"; };
+		345754C8250E3F2200D74C68 /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
 		3B3DA654467D232A9402D1E9 /* Pods-WheelExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WheelExampleTests.release.xcconfig"; path = "Target Support Files/Pods-WheelExampleTests/Pods-WheelExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		570713F2B8753C885C6F823A /* Pods-WheelExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WheelExample.debug.xcconfig"; path = "Target Support Files/Pods-WheelExample/Pods-WheelExample.debug.xcconfig"; sourceTree = "<group>"; };
 		717B0583DE54AE0F5D29C733 /* Pods-WheelExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WheelExample.release.xcconfig"; path = "Target Support Files/Pods-WheelExample/Pods-WheelExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		34333591250A1C110025330E /* WheelExample */ = {
 			isa = PBXGroup;
 			children = (
+				345754C6250E3F0500D74C68 /* Resources */,
 				345754B0250CDB7E00D74C68 /* Services */,
 				345754A6250C730200D74C68 /* Repositories */,
 				343335BF250A22240025330E /* Utitlites */,
@@ -189,6 +192,7 @@
 		343335B5250A1E740025330E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				345754C5250E3E6F00D74C68 /* CustomViews */,
 				343335BD250A20390025330E /* TableviewCells */,
 				343335BC250A20310025330E /* Controllers */,
 				343335BB250A201A0025330E /* Storyboards */,
@@ -253,7 +257,6 @@
 			isa = PBXGroup;
 			children = (
 				3457549B250C68B100D74C68 /* Helper */,
-				343335E9250A5E2D0025330E /* WheelyView */,
 				343335C7250A27D40025330E /* UIKitExtension */,
 				343335C0250A22450025330E /* AppConstants */,
 			);
@@ -404,6 +407,30 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		345754C5250E3E6F00D74C68 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				343335E9250A5E2D0025330E /* WheelyView */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		345754C6250E3F0500D74C68 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				345754C7250E3F0D00D74C68 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		345754C7250E3F0D00D74C68 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				345754C8250E3F2200D74C68 /* PressStart2P-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		964241C9B926E6991DC0FC01 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -509,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				343335E0250A2AF80025330E /* WheelItemListTableViewCell.xib in Resources */,
+				345754C9250E3F9200D74C68 /* PressStart2P-Regular.ttf in Resources */,
 				343335DB250A2A820025330E /* Wheel.storyboard in Resources */,
 				3433359F250A1C150025330E /* LaunchScreen.storyboard in Resources */,
 				3433359C250A1C150025330E /* Assets.xcassets in Resources */,

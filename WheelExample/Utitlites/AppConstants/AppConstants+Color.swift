@@ -17,6 +17,8 @@ extension AppConstants {
     static let cellTitleLabel = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     
     static let textField = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+    
+    static let congratulation = #colorLiteral(red: 1, green: 0.6235294118, blue: 0.03921568627, alpha: 1)
   }
 }
 

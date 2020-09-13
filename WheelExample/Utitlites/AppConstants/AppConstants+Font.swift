@@ -20,5 +20,7 @@ extension AppConstants{
   
     static let cellTitle = UIFont.systemFont(ofSize: 18, weight: .semibold)
     static let cellSubtitle =  UIFont.systemFont(ofSize: 14, weight: .light)
+    
+    static let congratulation = UIFont(name: "PressStart2P-Regular", size: 24)
   }
 }

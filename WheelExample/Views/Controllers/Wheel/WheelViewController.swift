@@ -12,8 +12,11 @@ class WheelViewController: UIViewController {
   //MARK:- IBOutlets and Variables
   @IBOutlet private weak var wheelyView: WheelyView!
   @IBOutlet private weak var spinButton: UIButton!
+  @IBOutlet weak var winnerLabel: UILabel!
   
-  var viewModel: WheelViewModel!
+  private let labelAnimationDuration = 0.5
+  
+  private var viewModel: WheelViewModel!
   
   //MARK:- LifeCycle Methods
   class func load(with wheelViewModel: WheelViewModel) -> WheelViewController {
@@ -35,11 +38,30 @@ class WheelViewController: UIViewController {
     spinButton.isEnabled = viewModel.enableSpin
     spinButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
     spinButton.roundedFilled(with: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), and: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
+    
+    winnerLabel.font = AppConstants.Font.congratulation
+    winnerLabel.textColor = AppConstants.Color.congratulation
+    resetWinnerLabel()
   }
   
-  //MARK:- IBActions
+  //MARK:- Actions
   @IBAction func spinButtonAction(_ sender: UIButton) {
+    resetWinnerLabel()
     wheelyView.animate()
+  }
+  
+  func resetWinnerLabel() {
+    winnerLabel.text = nil
+  }
+  
+  func setWinnerLabel(with winner: String) {
+    self.winnerLabel.text = "Lucky Winnner is \(winner)"
+  
+    winnerLabel.center.x -= view.bounds.width
+    UIView.animate(withDuration: labelAnimationDuration, delay: 0, options: .curveEaseInOut, animations: {
+      self.winnerLabel.center.x += self.view.bounds.width
+     
+    }, completion: nil)
   }
 }
 
@@ -52,7 +74,7 @@ extension WheelViewController: WheelyViewDataSource {
   func wheelyView(_ wheeyView: WheelyView, titleFor index: Int) -> String {
     return viewModel.items[index].title
   }
- 
+  
   func wheelyView(_ wheelyView: WheelyView, sliceColorFor index: Int) -> UIColor {
     return viewModel.items[index].backgroundColor
   }
@@ -65,8 +87,6 @@ extension WheelViewController: WheelyViewDataSource {
 //MARK:- WheelyView Delegate
 extension WheelViewController: WheelyViewDelegate {
   func wheelyView(_ wheelyView: WheelyView, didSelectAt index: Int) {
-    showAlert(with: "Lucky Winner is:",
-                   and: viewModel.items[index].title,
-                   preferredStyle: .alert)
+    setWinnerLabel(with: viewModel.items[index].title)
   }
 }
