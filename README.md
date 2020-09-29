@@ -1,6 +1,6 @@
 # WheelyCool
 
-[![Youtube Link](https://img.youtube.com/vi/9dcSMrZNfAc/0.jpg)](https://youtu.be/9dcSMrZNfAc)
+[![Youtube Link](https://img.youtube.com/vi/sIQX4G2a27o/0.jpg)](https://www.youtube.com/watch?v=sIQX4G2a27o)
 
 The App only has two screens: one that allows a user to add values to “The Wheel”, and one where the Wheel can be spun for a random result.
 
